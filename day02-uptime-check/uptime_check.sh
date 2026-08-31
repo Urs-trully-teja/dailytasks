@@ -1,6 +1,3 @@
-
-
-
 #!/bin/bash
 # uptime_check.sh - checks if a website/service is reachable
 
