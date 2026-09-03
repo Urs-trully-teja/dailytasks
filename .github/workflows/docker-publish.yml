@@ -1,5 +1,8 @@
 name: Build and Push Docker Image
 
+env:
+  IMAGE_NAME: kteja2017/dailytasks
+
 on:
   push:
     branches:
@@ -24,5 +27,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: kteja2017/dailytasks:latest
+          tags: ${{ env.IMAGE_NAME }}:latest
 
