@@ -29,3 +29,12 @@ jobs:
           push: true
           tags: ${{ env.IMAGE_NAME }}:latest
 
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Simulate deployment
+        run: |
+          echo "Deploying image ${{ env.IMAGE_NAME }}:latest"
+          echo "This step will be replaced with real SSH + docker pull/run once EC2 access is restored"       
